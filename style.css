@@ -1,0 +1,242 @@
+*{
+   box-sizing: border-box;
+}
+svg{
+   position: absolute; 
+}
+#draw{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    left: 293px;
+}
+div#replay{
+position: absolute;
+display: inline-block;    
+width: 200px;
+height: 50px;
+z-index: 1;
+bottom: 70px;
+left: 750px;
+border-radius: 5px;
+transition:box-shadow 0.3s ;
+}
+div#replay svg{
+    margin-top: 10px;
+    margin-left: 50px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+div#replay:hover{
+    box-shadow:0 0 10px rgb(246, 255, 0);
+   
+}
+#pl{
+    position: absolute;
+    top:45vh;
+    left: 25vw;
+    z-index:1;
+}
+#pl1{
+    stroke-dasharray:1000 ;
+    stroke-dashoffset: 0;
+}
+#win{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(back.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: auto;
+}
+
+body{
+    margin:0;
+    background-color: black;
+}
+   
+span.x{
+    transform-origin: top center; 
+
+    border-radius: 50%;
+    background-color: rgb(0, 210, 218);
+    display: inline-block;
+    animation-name: x;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes x{
+    0% {width: 0px;height: 0px;}
+    3%{width: 5px;height: 5px;}
+    10%{width: 12px;height: 12px; }
+    100%{width: 12px;height: 100px;}
+    
+    
+}
+
+span:nth-child(1).x{
+margin-top: 12px;    
+margin-left: 12px;
+transform: rotate(-40deg);
+
+}
+span:nth-child(2).x{
+    margin-left: 54px;
+    transform: rotate(40deg);
+    
+}
+/* O  */
+span.o{
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+span.o img{
+   margin: auto;
+   animation:o 0.3s forwards ;
+   display: block;
+  }
+  @keyframes o{
+      0% {width: 0px;}
+      100% {width: 100px;}
+  }
+/* boxes */
+p{  
+    border: 0.01mm solid hsl(192, 100%, 53%);
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: box-shadow 0.1s;
+}
+p:hover{
+    box-shadow:0px 0px 20px hsl(192, 100%, 53%);
+}
+
+div div:nth-child(1) p:nth-child(1){
+left: 20px ;
+}
+div div:nth-child(1) p:nth-child(2){
+left: 20px ;
+top: 120px;
+}
+div div:nth-child(1) p:nth-child(3){
+left: 20px ;
+top: 240px;
+}
+div div:nth-child(2) p:nth-child(1){
+left: 140px;
+}
+div div:nth-child(2) p:nth-child(2){
+left: 140px;
+top:120px;
+}
+div div:nth-child(2) p:nth-child(3){
+left: 140px;
+top:240px;
+}
+div div:nth-child(3) p:nth-child(1){
+left: 260px;
+}
+div div:nth-child(3) p:nth-child(2){
+left: 260px;
+top:120px;
+}
+div div:nth-child(3) p:nth-child(3){
+left: 260px;
+top:240px;
+}
+
+div.container{
+    box-shadow:0px 0px 5px rgb(31, 31, 31) ;
+   top: 10px;
+   margin: auto; 
+   position: relative;
+   height: 375px;
+   width: 380px;
+   background-color: black;
+   border-radius: 10px;
+}
+
+
+@media (min-width:1081px) and (max-width:1366px){
+    div#replay{
+        position: absolute;
+        display: inline-block;    
+        width: 200px;
+        height: 50px;
+        z-index: 1;
+        bottom: 45px;
+        left: 590px;
+        border-radius: 5px;
+        transition:box-shadow 0.3s ;
+        }
+        #pl{
+            position: absolute;
+            top:45vh;
+            left: 22vw;
+            z-index:1;
+        }
+        #draw{
+            left:260px;
+        }
+}
+@media (min-width:901px) and (max-width:1080px){
+    #pl1{
+        width: 700px;
+        
+    }
+    div#replay{
+        position: absolute;
+        display: inline-block;    
+        width: 200px;
+        height: 50px;
+        z-index: 1;
+        bottom: 45px;
+        left: 440px;
+        border-radius: 5px;
+        transition:box-shadow 0.3s ;
+        }
+        #pl{
+            position: absolute;
+            top:45vh;
+            left: 15vw;
+            z-index:1;
+        }
+}
+@media(max-width:420px){
+    #pl1{
+        width: 385px;
+        
+    }
+    #pl1 path{
+        stroke-width: 1.5px;
+    }
+    div#replay{
+        position: absolute;
+        display: inline-block;    
+        width: 200px;
+        height: 50px;
+        z-index: 1;
+        bottom: 45px;
+        left: 100px;
+        border-radius: 5px;
+        transition:box-shadow 0.3s ;
+        }
+        #pl{
+            position: absolute;
+            top:45vh;
+            left: 2vw;
+            z-index:1;
+        }
+        #draw{
+            left:17vw;
+        }
+}
