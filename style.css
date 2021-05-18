@@ -7,7 +7,7 @@ svg{
 #draw{
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
-    left: 293px;
+    left: 255px;
 }
 div#replay{
 position: absolute;
